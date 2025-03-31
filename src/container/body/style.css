@@ -1,0 +1,48 @@
+/* Định dạng tổng quát cho Swiper */
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Khoảng cách giữa slider và dot indicator */
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+/* Nút điều hướng Swiper */
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Màu mũi tên trong nút */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Hiệu ứng hover */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: #f5f5f5;
+}
+
