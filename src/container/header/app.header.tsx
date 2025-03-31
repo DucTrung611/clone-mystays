@@ -29,7 +29,7 @@ const AppHeader = () => {
                         height={50}
                     />
                     <div>
-                        <div className="flex gap-4 justify-end">
+                        <div className="flex gap-4 justify-end text-white">
                             <a href="/" className="flex gap-2">
                                 <div>+81-3-3434-3939</div>
                                 <PhoneEnabledIcon />
