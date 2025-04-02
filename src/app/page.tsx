@@ -4,10 +4,10 @@ import AppHeader from "@/container/header/app.header";
 
 export default function Home() {
     return (
-        <>
+        <div className="sm:w-full">
             <AppHeader />
             <AppBody />
             <AppFooter />
-        </>
+        </div>
     );
 }

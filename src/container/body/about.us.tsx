@@ -7,8 +7,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Link from "next/link";
 
-import img1 from "../../../public/img-beach.avif";
-import img2 from "../../../public/img-hotel1.avif";
+import img1 from "../../../public/img-beach.jpg";
+import img2 from "../../../public/img-hotel1.jpg";
 import logoHotel1 from "../../../public/logo-hotel1.png";
 
 // Danh sách ảnh cho Swiper

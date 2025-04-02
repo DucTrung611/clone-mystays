@@ -34,17 +34,35 @@ const AppHeader = () => {
                                 <div>+81-3-3434-3939</div>
                                 <PhoneEnabledIcon />
                             </a>
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 md:hidden">
                                 <select
                                     id="language"
                                     value={language}
                                     className="w-m h-[20px]"
                                     onChange={handleLanguageChange}
                                 >
-                                    <option value="English">English</option>
-                                    <option value="Chinese">Chinese</option>
-                                    <option value="Japanese">Japanese</option>
-                                    <option value="Vietnamese">
+                                    <option
+                                        value="English"
+                                        className="text-black"
+                                    >
+                                        English
+                                    </option>
+                                    <option
+                                        value="Chinese"
+                                        className="text-black"
+                                    >
+                                        Chinese
+                                    </option>
+                                    <option
+                                        value="Japanese"
+                                        className="text-black"
+                                    >
+                                        Japanese
+                                    </option>
+                                    <option
+                                        value="Vietnamese"
+                                        className="text-black"
+                                    >
                                         Vietnamese
                                     </option>
                                 </select>

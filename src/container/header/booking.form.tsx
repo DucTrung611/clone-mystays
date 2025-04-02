@@ -1,6 +1,6 @@
 export const BookingForm = () => {
     return (
-        <div className="relative top-[-60] left-1/2 -translate-x-1/2  max-w-6xl bg-white p-4 shadow-[0_15px_32px_-4px_rgba(37,58,106,0.3)] flex items-center justify-between">
+        <div className="relative 2xl:top-[-60] left-1/2 -translate-x-1/2  max-w-6xl bg-white p-4 shadow-[0_15px_32px_-4px_rgba(37,58,106,0.3)] flex items-center justify-between] justify-center">
             {/* Địa điểm */}
             <div className="flex flex-col items-center text-center px-4">
                 <label className="text-sm font-semibold">Where in Japan?</label>

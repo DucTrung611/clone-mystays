@@ -1,7 +1,7 @@
 import Image from "next/image";
-import imgThematic1 from "../../../public/imgThematic1.avif";
-import imgThematic2 from "../../../public/imgThematic2.avif";
-import imgThematic3 from "../../../public/imgThematic3.avif";
+import imgThematic1 from "../../../public/imgThematic1.jpg";
+import imgThematic2 from "../../../public/imgThematic2.jpg";
+import imgThematic3 from "../../../public/imgThematic3.jpg";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 const ThematicTravel = () => {
     const data = [

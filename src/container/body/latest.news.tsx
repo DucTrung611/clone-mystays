@@ -1,4 +1,4 @@
-import latestNew from "../../../public/pic-latestnews.avif";
+import latestNew from "../../../public/pic-latestnews.jpg";
 import Image, { StaticImageData } from "next/image";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";

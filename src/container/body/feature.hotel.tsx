@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from "next/image";
-import imgHotel1 from "../../../public/feature-hotel-1.avif";
-import imgHotel2 from "../../../public/feature-hotel-2.avif";
-import imgHotel3 from "../../../public/feature-hotel-3.avif";
-import banner from "../../../public/banner.avif";
+import imgHotel1 from "../../../public/feature-hotel-1.jpg";
+import imgHotel2 from "../../../public/feature-hotel-2.jpg";
+import imgHotel3 from "../../../public/feature-hotel-3.jpg";
+import banner from "../../../public/banner.jpg";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import Link from "next/link";
 
