@@ -1,60 +1,79 @@
+"use client";
+import * as React from "react";
+import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
+import { LocalizationProvider } from "@mui/x-date-pickers-pro/LocalizationProvider";
+import { AdapterDayjs } from "@mui/x-date-pickers-pro/AdapterDayjs";
+import { DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
+import { LicenseInfo } from "@mui/x-license";
+import { TextField } from "@mui/material";
+
 export const BookingForm = () => {
+    //@ts-ignore
+    LicenseInfo.setLicenseKey(process.env.NEXT_PUBLIC_MUIX_KEY);
     return (
-        <div className="relative 2xl:top-[-60] left-1/2 -translate-x-1/2  max-w-6xl bg-white p-4 shadow-[0_15px_32px_-4px_rgba(37,58,106,0.3)] flex items-center justify-between] justify-center">
+        <div className="max-w-5xl mx-auto relative bg-white -top-15 z-1  p-5 flex items-center justify-between  max-lg:flex-col max-lg:gap-5">
             {/* Địa điểm */}
-            <div className="flex flex-col items-center text-center px-4">
-                <label className="text-sm font-semibold">Where in Japan?</label>
-                <input
-                    type="text"
+            <div className="flex flex-col items-center text-center px-4 max-lg:w-full ">
+                <label className="text-sm py-1">Where in Japan?</label>
+                <TextField
+                    className="max-lg:w-full"
                     placeholder="City & Hotel"
-                    className="border p-2  text-center w-50"
+                    type="search"
                 />
             </div>
 
             {/* Ngày check-in & check-out */}
-            <div className="flex items-center gap-4">
-                <div className="text-center">
-                    <label className="text-sm font-semibold">Check In</label>
-                    <div className="border p-2  text-center w-20">
-                        <span className="text-xl font-bold">06</span>
-                        <div className="text-xs">Apr 2025</div>
+            <div className="max-lg:w-full max-lg:px-4">
+                <div className="flex justify-around text-sm">
+                    <span>Check in</span>
+                    <span>Check out</span>
+                </div>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DemoContainer components={["DateRangePicker"]}>
+                        <DateRangePicker
+                            localeText={{
+                                start: "",
+                                end: "",
+                                cancelButtonLabel: "",
+                                clearButtonLabel: "",
+                                okButtonLabel: "",
+                                todayButtonLabel: "",
+                            }}
+                        />
+                    </DemoContainer>
+                </LocalizationProvider>
+            </div>
+            <div className="flex justify-center max-lg:w-full">
+                {/* Số khách */}
+                <div className="text-center px-4 max-lg:w-full">
+                    <label className="text-sm">Guest No.</label>
+                    <div>
+                        <TextField
+                            className="lg:w-[80px] max-lg:w-full"
+                            placeholder="Guests"
+                            type="number"
+                        />
                     </div>
                 </div>
 
-                <span className="text-2xl">→</span>
-
-                <div className="text-center">
-                    <label className="text-sm font-semibold">Check Out</label>
-                    <div className="border p-2  text-center w-20">
-                        <span className="text-xl font-bold">07</span>
-                        <div className="text-xs">Apr 2025</div>
-                    </div>
+                {/* Mã giảm giá */}
+                <div className="flex flex-col text-center px-4 justify-center max-lg:w-full">
+                    <label className="text-sm">Promo Code</label>
+                    <TextField
+                        className="lg:w-[105px] max-lg:w-full"
+                        placeholder="------------------------------"
+                        type="text"
+                    />
                 </div>
             </div>
-
-            {/* Số khách */}
-            <div className="text-center px-4">
-                <label className="text-sm font-semibold">Guest No.</label>
-                <div className="border p-2  text-center w-16">
-                    <span className="text-xl font-bold">2</span>
-                    <div className="text-xs">Guests</div>
-                </div>
-            </div>
-
-            {/* Mã giảm giá */}
-            <div className="flex flex-col text-center px-4">
-                <label className="text-sm font-semibold">Promo Code</label>
-                <input
-                    type="text"
-                    placeholder="------"
-                    className="border p-2  text-center w-20"
-                />
-            </div>
-
             {/* Nút tìm kiếm */}
-            <button className="bg-yellow-400 px-6 py-3  font-bold shadow-md hover:bg-yellow-500 transition">
-                Search
-            </button>
+            <div className="flex flex-col text-center justify-center lg:ml-5 max-lg:w-full max-lg:px-4">
+                <label className="text-nowrap">Best Price Guarantee</label>
+
+                <button className="bg-yellow-400 px-6 py-4 font-bold  hover:bg-yellow-500 transition max-lg:w-full">
+                    Search
+                </button>
+            </div>
         </div>
     );
 };

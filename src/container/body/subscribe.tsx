@@ -16,29 +16,31 @@ const Subscribe = () => {
                     in advance, before registering.
                     <br /> * Some plans are excluded.
                 </p>
-                <div className="grid grid-cols-5 gap-4 mt-4">
-                    <input
-                        type="text"
-                        placeholder="First Name"
-                        className="col-span-1 p-3 bg-[#ffff]"
-                    />
-                    <input
-                        type="text"
-                        placeholder="Last Name"
-                        className="col-span-1 p-3 bg-[#ffff]"
-                    />
+                <div className="flex gap-4 mt-4 max-lg:flex-col max-lg:w-full">
+                    <div className="flex gap-4 max-lg:w-full">
+                        <input
+                            type="text"
+                            placeholder="First Name"
+                            className="p-3 bg-[#ffff] max-lg:w-full"
+                        />
+                        <input
+                            type="text"
+                            placeholder="Last Name"
+                            className=" p-3 bg-[#ffff] max-lg:w-full"
+                        />
+                    </div>
                     <input
                         type="email"
                         placeholder="Email"
-                        className="col-span-1 p-3 bg-[#ffff]"
+                        className=" p-3 bg-[#ffff]"
                     />
-                    <select className="col-span-1 p-3 bg-[#ffff]">
+                    <select className=" p-3 bg-[#ffff]">
                         <option>Prefecture/region</option>
                         <option>Tokyo</option>
                         <option>Osaka</option>
                         <option>Kyoto</option>
                     </select>
-                    <button className="col-span-1 bg-[#222d4b] text-white p-3  flex items-center justify-center">
+                    <button className=" bg-[#222d4b] text-white p-3  flex items-center justify-center">
                         Subscribe
                         <span className="ml-2">➜</span>
                     </button>

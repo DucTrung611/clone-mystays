@@ -47,7 +47,7 @@ const ThematicTravel = () => {
                     </h1>
                 </div>
 
-                <div className="mt-10 grid grid-cols-4 gap-6">
+                <div className="mt-10 grid grid-cols-4 gap-6 max-lg:grid-cols-2 max-lg:px-10">
                     {data.map((thematic, index) => (
                         <div key={index} className=" flex flex-col gap-2">
                             <Image

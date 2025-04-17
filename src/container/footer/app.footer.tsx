@@ -14,9 +14,10 @@ const AppFooter = () => {
                         alt="logo"
                         width={150}
                         height={50}
+                        className="max-lg:mx-auto"
                     />
                     <div />
-                    <span className="mt-3">
+                    <span className="mt-3 max-lg:mx-auto">
                         © MYSTAYS HOTEL MANAGEMENT Co., Ltd.
                     </span>
                 </div>

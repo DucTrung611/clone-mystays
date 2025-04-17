@@ -8,6 +8,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import SlickList from "./slick.list";
 import { BookingForm } from "./booking.form";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import DrawerHeader from "./drawer";
 
 const AppHeader = () => {
     const [language, setLanguage] = useState("English");
@@ -28,17 +29,17 @@ const AppHeader = () => {
                         width={150}
                         height={50}
                     />
-                    <div>
+                    <div className="max-md:hidden">
                         <div className="flex gap-4 justify-end text-white">
                             <a href="/" className="flex gap-2">
                                 <div>+81-3-3434-3939</div>
                                 <PhoneEnabledIcon />
                             </a>
-                            <div className="flex gap-2 md:hidden">
+                            <div className="flex gap-2">
                                 <select
                                     id="language"
                                     value={language}
-                                    className="w-m h-[20px]"
+                                    className="w-m h-[20px] cursor-pointer"
                                     onChange={handleLanguageChange}
                                 >
                                     <option
@@ -70,8 +71,7 @@ const AppHeader = () => {
                             </div>
                         </div>
                         <div>
-                            <ul className="flex items-center justify-between px-4 py-3 text-white gap-12">
-                                {/* Search Box */}
+                            <ul className="flex items-center justify-between px-4 py-3 text-white gap-7 ">
                                 <li>
                                     <div className="relative">
                                         <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -86,8 +86,6 @@ const AppHeader = () => {
                                         />
                                     </div>
                                 </li>
-
-                                {/* Desktop Menu */}
 
                                 <li>
                                     <Link href="/" className="">
@@ -114,24 +112,44 @@ const AppHeader = () => {
                                         Features
                                     </Link>
                                 </li>
+                                <li>
+                                    <DrawerHeader />
+                                </li>
                             </ul>
                         </div>
+                    </div>
+                    <div className="md:hidden flex justify-center place-items-center">
+                        <div className="relative">
+                            <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+
+                            <input
+                                className="rounded-md pl-10 bg-[#39435a] h-6 w-40"
+                                aria-label="Search"
+                                type="text"
+                                name="searchbox"
+                                maxLength={30}
+                                placeholder="Find a hotel"
+                            />
+                        </div>
+                        <DrawerHeader />
                     </div>
                 </div>
                 <div className="max-w-7xl mx-auto">
                     <SlickList />
                 </div>
-                <div className="w-full  absolute  z-20">
+            </div>
+            <div className="bg-[#f2f2f2f2]">
+                <div className="mx-auto">
                     <BookingForm />
-                    <div className="flex gap-10 justify-center">
-                        <div className="flex gap-2">
-                            <CheckCircleIcon />
-                            <span>Best Price Guarantee</span>
-                        </div>
-                        <div className="flex gap-2">
-                            <CheckCircleIcon />
-                            <span>Online Concierge</span>
-                        </div>
+                </div>
+                <div className="flex gap-10 justify-center pb-20">
+                    <div className="flex gap-2">
+                        <CheckCircleIcon />
+                        <span>Best Price Guarantee</span>
+                    </div>
+                    <div className="flex gap-2">
+                        <CheckCircleIcon />
+                        <span>Online Concierge</span>
                     </div>
                 </div>
             </div>

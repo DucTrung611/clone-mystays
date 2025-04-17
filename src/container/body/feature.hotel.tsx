@@ -5,6 +5,7 @@ import imgHotel3 from "../../../public/feature-hotel-3.jpg";
 import banner from "../../../public/banner.jpg";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import Link from "next/link";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const FeatureHotel = () => {
     interface IData {
@@ -38,22 +39,21 @@ const FeatureHotel = () => {
         },
     ];
     return (
-        <div className="bg-[#f2f2f2] pt-5 pb-5">
-            <div className="mt-50 max-w-6xl mx-auto">
+        <div className="bg-[#f2f2f2]  pb-5">
+            <div className="max-w-6xl mx-auto">
                 <h3 className="flex justify-center font-bold text-4xl">
                     Featured Hotels
                 </h3>
-                <div className="mt-10 grid grid-cols-3 gap-10">
+                <div className="mt-10 grid grid-cols-3 gap-10 max-lg:grid-cols-1 max-lg:px-10">
                     {data.map((hotel, index) => (
                         <div
                             key={index}
-                            className="bg-[#ffff] shadow-2xl flex flex-col gap-2"
+                            className="bg-[#fff] shadow-2xl flex flex-col gap-2"
                         >
                             <Image
                                 src={hotel.img}
                                 alt={hotel.title}
-                                layout="intrinsic"
-                                className="w-full"
+                                className="w-full "
                             />
                             <div className="m-2 mb-10">
                                 <h3 className="font-medium">{hotel.title}</h3>
@@ -77,11 +77,23 @@ const FeatureHotel = () => {
                     ))}
                 </div>
 
+                <div className="flex justify-end my-10">
+                    <div className="flex items-center text-[#232e48] font-semibold cursor-pointer space-x-2">
+                        <span className="text-lg">See all News</span>
+                        <div className="w-6 h-6 flex items-center justify-center bg-[#232e48] rounded-full">
+                            <ArrowForwardIosIcon
+                                className="text-white text-sm"
+                                fontSize="small"
+                            />
+                        </div>
+                    </div>
+                </div>
+
                 <Link href={"/"}>
                     <Image
                         src={banner}
                         alt="banner"
-                        className="w-full h-32 mt-10 mb-15"
+                        className="w-full h-32 mt-20 mb-15"
                     />
                 </Link>
             </div>

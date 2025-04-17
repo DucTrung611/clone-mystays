@@ -1,37 +1,89 @@
 "use client";
-
 import * as React from "react";
-import dayjs, { Dayjs } from "dayjs";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { Box, TextField } from "@mui/material";
+import List from "@mui/material/List";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Collapse from "@mui/material/Collapse";
 
-const FlightDatePicker = () => {
-    const [checkIn, setCheckIn] = React.useState<Dayjs | null>(null);
-    const [checkOut, setCheckOut] = React.useState<Dayjs | null>(null);
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import SpeakerNotesIcon from "@mui/icons-material/SpeakerNotes";
+
+export default function NestedList() {
+    const menuItems = [
+        {
+            icon: <SpeakerNotesIcon className="text-[#232e48]" />,
+            title: "Reservations",
+            links: [
+                "Check/Cancel Hotel Reservations",
+                "Cancellation Policy",
+                "Best Price Guarantee",
+                "Terms and Conditions for Accommodation Contracts",
+            ],
+        },
+        {
+            icon: <SpeakerNotesIcon className="text-[#232e48]" />,
+            title: "Get in Touch",
+            links: [
+                "FAQ",
+                "Individual Guests",
+                "Corporate Guests",
+                "Press/Media Representatives",
+            ],
+        },
+        {
+            icon: <SpeakerNotesIcon className="text-[#232e48]" />,
+            title: "Company",
+            links: ["Company Outline"],
+        },
+        {
+            icon: <SpeakerNotesIcon className="text-[#232e48]" />,
+            title: "Website Use",
+            links: [
+                "Terms of Use",
+                "Privacy Policy",
+                "Act on Specified Commercial Transactions",
+            ],
+        },
+    ];
+
+    const [open, setOpen] = React.useState(true);
+
+    const handleClick = () => {
+        setOpen(!open);
+    };
 
     return (
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <Box className="flex flex-col md:flex-row gap-4 items-center justify-center bg-white p-4 shadow-lg rounded-lg">
-                <DatePicker
-                    label="Outbound"
-                    value={checkIn}
-                    onChange={(newValue) => setCheckIn(newValue)}
-                    minDate={dayjs()}
-                    // renderInput={(params) => <TextField {...params} />}
-                />
-
-                <DatePicker
-                    label="Inbound"
-                    value={checkOut}
-                    onChange={(newValue) => setCheckOut(newValue)}
-                    minDate={checkIn ? checkIn.add(1, "day") : dayjs()}
-                    // renderInput={(params) => <TextField {...params} />}
-                />
-            </Box>
-        </LocalizationProvider>
+        <>
+            {menuItems.map((item, index) => (
+                <List key={index}>
+                    <ListItemButton onClick={handleClick}>
+                        <ListItemIcon>
+                            <SpeakerNotesIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={item.title} />
+                        {open ? <ExpandLess /> : <ExpandMore />}
+                    </ListItemButton>
+                    <Collapse in={open} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                            <div className="pl-5">
+                                <div className="border-b border-gray-300 w-full my-2"></div>
+                                <ul className="text-sm text-gray-600 space-y-1">
+                                    {item.links.map((link, idx) => (
+                                        <li
+                                            key={idx}
+                                            className="hover:text-[#232e48] cursor-pointer"
+                                        >
+                                            {link}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </List>
+                    </Collapse>
+                </List>
+            ))}
+        </>
     );
-};
-
-export default FlightDatePicker;
+}

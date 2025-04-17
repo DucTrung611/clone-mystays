@@ -32,7 +32,7 @@ const LatestNews = () => {
         <div className="max-w-6xl mx-auto my-10">
             <h2 className="text-3xl font-bold text-center">Latest News</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-15 max-w-6xl mx-auto my-10">
+            <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-15 max-w-6xl mx-auto my-10">
                 {data.map((item, index) => (
                     <div
                         key={index}
@@ -51,7 +51,7 @@ const LatestNews = () => {
                         </span>
 
                         {/* Đẩy nút xuống dưới cùng */}
-                        <div className="mt-auto my-15">
+                        <div className="mt-auto my-15 max-lg:mt-5">
                             <button className="w-[125px] h-[40px] bg-[#232e48] text-white font-semibold mx-auto">
                                 View More
                             </button>

@@ -11,7 +11,7 @@ const SlickList = () => {
     const images = [image1, image2];
     return (
         <Swiper
-            className="relative  mx-auto"
+            className="mx-auto"
             slidesPerView={1}
             navigation={true}
             modules={[Navigation]}

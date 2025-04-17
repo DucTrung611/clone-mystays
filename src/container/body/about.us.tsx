@@ -17,7 +17,7 @@ const images = [img1, img2];
 const AboutUs = () => {
     return (
         <>
-            <div className="relative max-w-6xl mx-auto md:h-[600px] lg:h-[700px] content-center overflow-visible my-20">
+            <div className="relative max-w-6xl mx-auto  content-center overflow-visible my-20 max-lg:hidden">
                 {/* Swiper - Đồng bộ ảnh lớn & ảnh nhỏ */}
                 <Swiper
                     slidesPerView={1}
@@ -29,18 +29,16 @@ const AboutUs = () => {
                     {images.map((image, index) => (
                         <SwiperSlide key={index} className="relative">
                             {/* Ảnh lớn */}
-                            <div className="relative w-full h-[600px] lg:h-[700px]">
+                            <div className="relative w-full h-[600px] ">
                                 <Image
                                     src={image}
                                     alt={`Slide ${index + 1}`}
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="z-0"
+                                    className="z-0 w-full"
                                 />
                             </div>
 
                             {/* Ảnh nhỏ */}
-                            <div className="absolute bottom-5 right-10 w-40 md:w-60 lg:w-80 z-10">
+                            <div className="absolute bottom-5 right-10 w-40 z-10">
                                 <Image
                                     src={image}
                                     alt={`Thumbnail ${index + 1}`}
@@ -74,7 +72,7 @@ const AboutUs = () => {
                 </div>
             </div>
 
-            <div className="max-w-6xl mx-auto flex gap-10 justify-center">
+            <div className="max-w-6xl mx-auto flex gap-10 justify-center max-lg:hidden">
                 <Link href={"/"}>
                     <Image src={logoHotel1} alt="logo-hotel" />
                 </Link>

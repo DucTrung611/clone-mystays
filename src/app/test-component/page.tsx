@@ -1,8 +1,8 @@
-import FlightDatePicker from "./time.pick";
+import NestedList from "./time.pick";
 const Page = () => {
     return (
         <div>
-            <FlightDatePicker />
+            <NestedList />
         </div>
     );
 };
