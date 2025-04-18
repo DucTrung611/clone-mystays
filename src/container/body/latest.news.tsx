@@ -46,12 +46,12 @@ const LatestNews = () => {
 
                         <h2 className="mt-4 font-bold">{item.title}</h2>
                         <span className="text-gray-500 text-sm flex items-center mt-2">
-                            <AccessTimeIcon className="w-4 h-4 mr-1" />
+                            <AccessTimeIcon className="w-4 h-4 mr-1 " />
                             {item.day}
                         </span>
 
                         {/* Đẩy nút xuống dưới cùng */}
-                        <div className="mt-auto my-15 max-lg:mt-5">
+                        <div className="mt-auto  max-lg:mt-5 ">
                             <button className="w-[125px] h-[40px] bg-[#232e48] text-white font-semibold mx-auto">
                                 View More
                             </button>

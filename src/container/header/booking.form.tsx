@@ -8,8 +8,11 @@ import { LicenseInfo } from "@mui/x-license";
 import { TextField } from "@mui/material";
 
 export const BookingForm = () => {
-    //@ts-ignore
-    LicenseInfo.setLicenseKey(process.env.NEXT_PUBLIC_MUIX_KEY);
+    const NEXT_PUBLIC_MUIX_KEY =
+        "e0d9bb8070ce0054c9d9ecb6e82cb58fTz0wLEU9MzI0NzIxNDQwMDAwMDAsUz1wcmVtaXVtLExNPXBlcnBldHVhbCxLVj0y";
+    if (NEXT_PUBLIC_MUIX_KEY) {
+        LicenseInfo.setLicenseKey(NEXT_PUBLIC_MUIX_KEY);
+    }
     return (
         <div className="max-w-5xl mx-auto relative bg-white -top-15 z-1  p-5 flex items-center justify-between  max-lg:flex-col max-lg:gap-5">
             {/* Địa điểm */}

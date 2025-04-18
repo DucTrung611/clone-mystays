@@ -62,7 +62,7 @@ const AboutUs = () => {
                         find the best deal in the right location.
                     </p>
                     <p className="text-gray-700 text-sm md:text-base mt-2">
-                        Whether you are travelling last minute, as a family or
+                        Whether you are traveling last minute, as a family or
                         need a hotel for business, we have the right hotel deal
                         for you. We also have multilingual staff if you would
                         prefer to speak to someone. Don't forget about our Best

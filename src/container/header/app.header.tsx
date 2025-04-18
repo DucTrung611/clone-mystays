@@ -31,7 +31,7 @@ const AppHeader = () => {
                     />
                     <div className="max-md:hidden">
                         <div className="flex gap-4 justify-end text-white">
-                            <a href="/" className="flex gap-2">
+                            <a href="#" className="flex gap-2">
                                 <div>+81-3-3434-3939</div>
                                 <PhoneEnabledIcon />
                             </a>
@@ -88,27 +88,27 @@ const AppHeader = () => {
                                 </li>
 
                                 <li>
-                                    <Link href="/" className="">
+                                    <Link href="#" className="">
                                         Hotel List
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/" className="">
+                                    <Link href="#" className="">
                                         Brands
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/" className="">
+                                    <Link href="#" className="">
                                         Hot springs
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/" className="">
+                                    <Link href="#" className="">
                                         Banquet & Meeting
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/" className="">
+                                    <Link href="#" className="">
                                         Features
                                     </Link>
                                 </li>
